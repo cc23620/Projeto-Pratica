@@ -1,20 +1,20 @@
-create table CDJ.jogos(	
-	id_jogo int primary key identity(100,1),
+create table cdjjogos(	
+	id_jogo int primary key auto_increment,
 	nome_jogo varchar(50),
-	tipo_jogo varchar(30),
-)
+	tipo_jogo varchar(30)
+);
 
-create table CDJ.clientes(
-	id_cliente      int identity(1,1) primary key,
+create table cdjclientes(
+	id_cliente      int primary key auto_increment,
 	nome_cliente    varchar(60),
 	email           varchar(100),
-    tipo_favorito   varchar(30) 
-)
+    	tipo_favorito   varchar(30) 
+);
 
-create table CDJ.reservas(
-	id_cliente int foreign key references CDJ.clientes(id_cliente),
-	id_reserva int identity(1,1) primary key,
+create table cdjreservas(
+	id_cliente int foreign key references cdjclientes(id_cliente),
+	id_reserva int primary key auto_increment,
 	data_reserva date,
 	horario  time (0) NOT NULL,
 	qte_pessoas int
-)
+);
