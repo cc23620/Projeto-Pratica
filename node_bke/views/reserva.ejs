@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleR.css">
+    <title>Reserva de Mesas</title>
+</head>
+<body>
+    
+    <div id="figura"></div>
+    <div id="quadro"></div>
+    <div id="titulo">
+        <div id="main-container">
+        <h1><b>Reserva de Mesas<b></h1>
+        <br>
+        <form id="cadastrar-form">
+            <div class="name" >
+                <label for="name"> usuário</label>
+                <input type="text" name="nome" id="nome" placeholder="id do cliente">
+                <label for="tipo"> qte. convidados</label>
+                <input type="number" name="Quantidade" id="jogadores" placeholder="qte de convidados">
+            </div>
+
+            <div>          
+                <label for="tipo"> data</label>
+                <input type="date" name="Data" id="Data" placeholder="defina a data da reserva">
+                <label for="tipo"> hora</label>
+                <input type="time" name="Horário" id="categoria" placeholder="defina o horário da reserva">
+                </div>
+            <div>
+                <input type="submit" value="confirmar reserva" id="btn-submit">
+            </div>
+
+            <h2>não possui cadastro?<a href="/Clientes"><u>criar cadastro</u></a></h2>
+            <p class="error-validation"></p>
+    </body>
+</html>
