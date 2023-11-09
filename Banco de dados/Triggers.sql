@@ -46,7 +46,7 @@ BEGIN
     SELECT @horaReserva = horario
     FROM inserted;
 
-    IF @horaReserva <= '00:00:00' OR @horaReserva >= '15:00:00'
+    IF @horaReserva <= '23:59:00' OR @horaReserva >= '15:00:00'
     BEGIN
         RAISERROR('A reserva não pode ser feita após 00h ou antes de 15h.');
         ROLLBACK;
