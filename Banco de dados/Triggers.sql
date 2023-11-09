@@ -14,25 +14,6 @@ BEGIN
     END
 END
 
---trigger que não permite a inserção de jogos que já existem no banco de dados CDJ
-
-CREATE TRIGGER [jogos].[VERIFICAJOGO]
-ON [JOGOS]
-AFTER INSERT
-AS
-BEGIN
-    DECLARE @nomeJogo VARCHAR(50);
-
-    SELECT @nomeJogo = i.nome_jogo
-    FROM inserted i;
-
-    IF EXISTS (SELECT 1 FROM [JOGOS] WHERE nome_jogo = @nomeJogo)
-    BEGIN
-        PRINT 'Impossível incluir: Jogo já existe no banco de dados';
-        ROLLBACK;
-    END
-END
-
 
 --trigger que não permite reservas antes ou depois do horário  de funcionamento das 15h00 ás 00h00
 
