@@ -1,6 +1,6 @@
-CREATE VIEW JogosDisponiveis AS 
-SELECT nome_jogo, tipo_jogo 
-FROM cdjjogos;
+CREATE VIEW mostraClientes AS 
+SELECT nome_cliente, email, tipo_favorito 
+FROM cdjclientes;
 
 
 CREATE VIEW ReservasFeitas AS 
